@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManikinRatingActivity">
+
+    <Button
+        android:id="@+id/rating_next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manikin_arousal" />
+
+    <nl.cwi.dis.physiofashion.views.SelfAssessmentManikin
+        android:id="@+id/manikin_valence"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:manikinType="VALENCE"
+        app:defaultValue="4"
+        app:size="44dp"
+        app:title="@string/rate_valence" />
+
+    <nl.cwi.dis.physiofashion.views.SelfAssessmentManikin
+        android:id="@+id/manikin_arousal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manikin_valence"
+        app:layout_constraintWidth_percent="0.9"
+        app:manikinType="AROUSAL"
+        app:defaultValue="4"
+        app:size="44dp"
+        app:title="@string/rate_arousal" />
+
+</android.support.constraint.ConstraintLayout>
